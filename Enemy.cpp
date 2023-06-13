@@ -32,3 +32,11 @@ void Enemy::takeDamage(int damage)
         currentHealth = 0;
     }
 }
+bool Enemy::isDead()
+{
+    if(currentHealth == 0)
+    {
+        return true;
+    }
+    return false;
+}

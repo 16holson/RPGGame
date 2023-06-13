@@ -23,6 +23,7 @@ Location* Location::getNeighbor(std::string direction)
     {
         return neighbors[direction];
     }
+    return nullptr;
 }
 void Location::addItem(Item* item)
 {
@@ -67,7 +68,7 @@ Item* Location::getItemByName(std::string name)
 {
     for(int i = 0; i < items.size(); i++)
     {
-        if(items[i]->getName() == name)
+        if(items[i]->getName() == name.erase(name.find_last_not_of(" \n\r\t")+1))
         {
             return items[i];
         }
@@ -78,7 +79,7 @@ Enemy* Location::getEnemyByName(std::string name)
 {
     for(int i = 0; i < enemies.size(); i++)
     {
-        if(enemies[i]->getName() == name)
+        if(enemies[i]->getName() == name.erase(name.find_last_not_of(" \n\r\t")+1))
         {
             return enemies[i];
         }

@@ -12,12 +12,14 @@ int main()
     GameModel gameModel;
     PlayerCharacter* playerCharacter = new PlayerCharacter("Player", 100, 10);
     gameModel.setPlayerCharacter(playerCharacter);
+    std::cout << "Current health: " << playerCharacter->getCurrentHealth() << std::endl;
+    // std::cout << "Current health: " << gameModel.getPlayerCharacter()->getCurrentHealth(); 
 
     //Create game map
     GameMap gameMap;
 
     Location* location1 = new Location("Location 1", "This is location 1.");
-    Item* item1 = new Item("Item 1", "This is item 1.");
+    Item* item1 = new Item("i", "This is item 1.");
     location1->addItem(item1);
     gameMap.addLocation(location1);
 

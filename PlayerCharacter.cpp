@@ -4,7 +4,7 @@ PlayerCharacter::PlayerCharacter(std::string name, int maxHealth, int attackPowe
 {
     this->name = name;
     this->maxHealth = maxHealth;
-    this->currentHealth = currentHealth;
+    this->currentHealth = maxHealth;
     this->attackPower = attackPower;
 }
 std::string PlayerCharacter::getName()
